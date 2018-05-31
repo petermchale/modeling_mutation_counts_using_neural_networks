@@ -1,9 +1,15 @@
+# Introduction 
+
+
 # Model 
 
 [Here](http://nbviewer.jupyter.org/github/petermchale/modeling_mutation_counts_using_neural_networks/blob/master/engineer_features/model/model.ipynb) is a description of the model, with properly rendered Plotly interactive graphs. 
 
-# Applications
+# Goal 
 
-* Project 1: Fit the model to de-novo mutation data to see how mutation rate varies with genomic coordinate. 
+We would like to build models that accurately predict the average number of mutations in a given genomic interval, i.e., given the genomic sequence and, possibly, epigenetic information, 
+e.g. DNase hypersensitivity profiles. We are particularly interested in the following applications of such models: 
 
-* Project 2: Fit the model to germline and somatic variation data. Then infer genomic regions under negative or positive selection by identifying regions in which the mutation count is lower or higher than expected under the trained model. 
+* Learning new genomic "features" responsible for variation in *de novo* mutation rate with genomic coordinate. 
+
+* By fitting the model to germline and somatic variation data, infer genomic regions under natural selection by identifying regions in which the mutation count is lower or higher than expected. 
