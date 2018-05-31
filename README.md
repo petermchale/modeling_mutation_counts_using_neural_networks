@@ -12,5 +12,3 @@ e.g. DNase hypersensitivity profiles. We are particularly interested in the foll
 Traditionally, researchers use prior knowledge of what affects mutation rate to build models. In machine learning parlance, features are "engineered" into such models. 
 [Here](http://nbviewer.jupyter.org/github/petermchale/modeling_mutation_counts_using_neural_networks/blob/master/engineer_features/model/model.ipynb) is an introductory example of 
 this approach to modeling mutation count data. 
-
-
