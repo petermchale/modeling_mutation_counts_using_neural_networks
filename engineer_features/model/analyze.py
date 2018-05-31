@@ -1,5 +1,5 @@
 from synthetic_data import generate_counts
-from neural_network import train
+from model import train
 from plot import plot_rates
 from plot import plot_counts
 

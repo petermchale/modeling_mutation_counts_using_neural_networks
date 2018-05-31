@@ -50,10 +50,10 @@ def plot_counts(df, l_heading_list, X_heading_list, y_heading_list):
     a = np.arange(df[y_heading].max())
     trace2 = plotly.graph_objs.Scattergl(x=a, y=a)
 
-    b = df[l_heading].max() * np.ones_like(a)
-    trace3 = plotly.graph_objs.Scattergl(x=a, y=b)
+    # b = df[l_heading].max() * np.ones_like(a)
+    # trace3 = plotly.graph_objs.Scattergl(x=a, y=b)
 
-    data = [trace1, trace2, trace3]
+    data = [trace1, trace2]
 
     layout = dict(font=dict(size=16),
                   hovermode='closest',
