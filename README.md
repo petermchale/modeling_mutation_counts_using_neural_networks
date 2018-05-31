@@ -13,5 +13,6 @@ from expectation. In other words, infer variants that give rise to inherited Men
 Traditionally, researchers use prior knowledge of what affects mutation rate to build models. In machine learning parlance, features are "engineered" into such models. 
 [Here](http://nbviewer.jupyter.org/github/petermchale/modeling_mutation_counts_using_neural_networks/blob/master/engineer_features/model/model.ipynb) is an introduction 
 to this approach
-and [here](engineer_features/data/analysis.ipynb) is a naive application of this approach to cancer data. Things one could do next include: 
+and [here](http://nbviewer.jupyter.org/github/petermchale/modeling_mutation_counts_using_neural_networks/blob/master/engineer_features/data/analysis.ipynb) 
+is a naive application of this approach to cancer data. Things one could do next include: 
 
