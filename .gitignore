@@ -1,0 +1,6 @@
+*.pyc 
+*.webloc 
+*.gz 
+*.pkl
+.ipynb_checkpoints
+.DS_Store
