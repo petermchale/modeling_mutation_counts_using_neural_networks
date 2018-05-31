@@ -1,6 +1,3 @@
-# Introduction 
-
-
 # Goal 
 
 We would like to build models that accurately predict the average number of mutations in a given genomic interval, i.e., given the genomic sequence and, possibly, epigenetic information, 
