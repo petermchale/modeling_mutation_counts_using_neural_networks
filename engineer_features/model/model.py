@@ -26,19 +26,23 @@ def train(data_df, l_heading_list, X_heading_list, y_heading_list, number_hidden
     with tf.variable_scope('feature_input_layer'):
         X = tf.placeholder(tf.float32, shape=(sample_size, number_feature_input_nodes))
 
-    # hidden layer (placeholder for later development beyond Poisson regression)
-    with tf.variable_scope('hidden_layer'):
-        hidden_layer_output = X
-
+    # # hidden layer (placeholder for later development beyond Poisson regression)
+    # with tf.variable_scope('hidden_layer'):
+    #     hidden_layer_output = X
+    #
     # output layer of neural network
     with tf.variable_scope('output_layer'):
+        # weights = tf.get_variable(name="weights",
+        #                           shape=(number_hidden_nodes, number_output_nodes),
+        #                           initializer=tf.contrib.layers.xavier_initializer())
         weights = tf.get_variable(name="weights",
-                                  shape=(number_hidden_nodes, number_output_nodes),
+                                  shape=(number_feature_input_nodes, number_output_nodes),
                                   initializer=tf.contrib.layers.xavier_initializer())
         biases = tf.get_variable(name="biases",
                                  shape=number_output_nodes,
                                  initializer=tf.zeros_initializer())
-        h = tf.exp(tf.matmul(hidden_layer_output, weights) + biases)
+        # h = tf.exp(tf.matmul(hidden_layer_output, weights) + biases)
+        h = tf.exp(tf.matmul(X, weights) + biases)
         prediction = l * h
 
     # cost function

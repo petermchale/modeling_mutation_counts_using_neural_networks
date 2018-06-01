@@ -19,5 +19,5 @@ is a naive application of this approach to cancer data. Things one could do next
 * Sanity-check the model by training the model using only mutations that are known to be correlated with certain genomic features, e.g., C->T mutation rate 
 is known to be influenced by CpG density  
 * Extend to other features known to affect mutation rate 
-* Train the model using only mutations **not** subject to natural selection, e.g. synonymous mutations, before searching for genomic regions under natural selection
-
+* Train the model using only mutations **not** subject to natural selection, e.g. synonymous mutations in the cancer genome, before searching for genomic regions under natural selection
+* Extend the neural network to include hidden nodes thereby making it possible to model mutation rates that are non-monotonic functions of feature variables
