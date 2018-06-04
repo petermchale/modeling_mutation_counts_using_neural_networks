@@ -35,7 +35,7 @@ is known to be influenced by CpG density
 * Train the model using only mutations **not** subject to natural selection, e.g. synonymous mutations in the cancer genome, before searching for genomic regions under natural selection
 * Extend the neural network to include hidden nodes thereby making it possible to model mutation rates that are non-monotonic functions of feature variables
 * Develop models that learn, rather than being fed, features that are predictive of mutation rate, e.g. feeding models genomic sequence rather than CpG density
-* Compute a QQ plot. Specifically, rank-order the total mutation counts per CCR, both for the data, 
+* Compute a QQ plot to better compare data and model. Specifically, rank-order the total mutation counts per CCR, both for the data, 
 and for a synthetic data set of equal size produced by the model, 
 and plot one set of "order statistics" against the other. 
 By first rank-ordering, we expect to reduce the noise in plots of expected versus actual mutation counts.
