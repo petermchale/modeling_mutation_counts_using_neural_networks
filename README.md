@@ -15,8 +15,10 @@ The code in this repo uses TensorFlow. Best is to set up a `conda` environment a
 ```
 conda create -n tensorflow python=2 ipython-notebook --yes
 source activate tensorflow 
-conda install -c conda-forge tensorflow 
+pip install tensorflow
 ```
+
+Note: `conda install -c conda-forge tensorflow` should also work. 
 
 # Feature-engineered models 
 
