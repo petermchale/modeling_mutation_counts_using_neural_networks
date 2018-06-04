@@ -8,6 +8,16 @@ e.g. DNase hypersensitivity profiles. We are particularly interested in the foll
 * Infer genomic regions under natural selection by identifying regions in which the mutation count deviates 
 from the expectations of the trained model. In other words, infer variants that give rise to inherited Mendelian diseases and driver mutations in cancer.
 
+# Tensorflow 
+
+The code in this repo uses `Tensorflow`. Best is to set up a `conda` environment and install Tensorflow there: 
+
+```
+conda create -n tensorflow python=2
+source activate tensorflow 
+conda install tensorflow 
+```
+
 # Feature-engineered models 
 
 Traditionally, researchers use prior knowledge of what affects mutation rate to build models. In machine learning parlance, features are "engineered" into such models. 
