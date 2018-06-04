@@ -18,7 +18,7 @@ source activate tensorflow
 pip install tensorflow
 ```
 
-As an alternative to `pip`, one should be able to install TensorFlow using `conda install -c conda-forge tensorflow` should also work. 
+As an alternative to `pip`, one should be able to install TensorFlow using `conda install -c conda-forge tensorflow`.
 
 # Feature-engineered models 
 
