@@ -33,10 +33,10 @@ is a naive application of this approach to cancer data.
 1. Sanity-check by training the model using only mutations that are known to be correlated with certain genomic features, e.g., C->T mutation rate 
 is known to be influenced by CpG density  
 1. Train the model using only mutations **not** subject to natural selection, e.g. synonymous mutations in the cancer genome, before searching for genomic regions under natural selection
-* Compute a QQ plot to better compare data and model. Specifically, rank-order the total mutation counts per CCR, both for the data, 
+1. Compute a QQ plot to better compare data and model. Specifically, rank-order the total mutation counts per CCR, both for the data, 
 and for a synthetic data set of equal size produced by the model, 
 and plot one set of "order statistics" against the other. 
 By first rank-ordering, we expect to reduce the noise in plots of expected versus actual mutation counts.
-* Extend the neural network to include hidden nodes thereby making it possible to model mutation rates that are non-monotonic functions of feature variables
-* Develop models that learn, rather than being fed, features that are predictive of mutation rate, e.g. feeding models genomic sequence rather than CpG density
+1. Extend the neural network to include hidden nodes thereby making it possible to model mutation rates that are non-monotonic functions of feature variables
+1. Develop models that learn, rather than being fed, features that are predictive of mutation rate, e.g. feeding models genomic sequence rather than CpG density
 
