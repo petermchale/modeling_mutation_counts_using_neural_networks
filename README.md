@@ -32,3 +32,4 @@ is a naive application of this approach to cancer data. Things one could do next
 is known to be influenced by CpG density  
 * Train the model using only mutations **not** subject to natural selection, e.g. synonymous mutations in the cancer genome, before searching for genomic regions under natural selection
 * Extend the neural network to include hidden nodes thereby making it possible to model mutation rates that are non-monotonic functions of feature variables
+* Develop models that learn, rather than being fed, features predictive of mutation rate
