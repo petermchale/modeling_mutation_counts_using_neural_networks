@@ -10,12 +10,12 @@ from the expectations of the trained model. In other words, infer variants that 
 
 # Tensorflow 
 
-The code in this repo uses `Tensorflow`. Best is to set up a `conda` environment and install Tensorflow there: 
+The code in this repo uses TensorFlow. Best is to set up a `conda` environment and install TensorFlow there: 
 
 ```
 conda create -n tensorflow python=2
 source activate tensorflow 
-conda install tensorflow 
+conda install -c conda-forge tensorflow 
 ```
 
 # Feature-engineered models 
