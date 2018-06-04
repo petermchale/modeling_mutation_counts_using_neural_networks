@@ -31,7 +31,7 @@ is a naive application of this approach to cancer data.
 # Possible next steps 
 
 1. Find all somatic variants that are in highly constrained CCRs. 
-Are those variants enriched in cancer driver mutations or known cancer genes?
+Are those variants enriched in cancer driver mutations or known cancer genes? [Credit: Brent Pedersen]
 1. Sanity-check by training the model using only mutations that are known to be correlated with certain genomic features, e.g., C->T mutation rate 
 is known to be influenced by CpG density  
 1. Train the model using only mutations **not** subject to natural selection, e.g. synonymous mutations in the cancer genome, before searching for genomic regions under natural selection
