@@ -26,9 +26,11 @@ Traditionally, researchers use prior knowledge of what affects mutation rate to 
 [Here](http://nbviewer.jupyter.org/github/petermchale/modeling_mutation_counts_using_neural_networks/blob/master/engineer_features/model/model.ipynb) is an introduction 
 to this approach
 and [here](http://nbviewer.jupyter.org/github/petermchale/modeling_mutation_counts_using_neural_networks/blob/master/engineer_features/data/analysis.ipynb) 
-is a naive application of this approach to cancer data. Things one could do next include: 
+is a naive application of this approach to cancer data. 
 
-* Sanity-check the model by training the model using only mutations that are known to be correlated with certain genomic features, e.g., C->T mutation rate 
+# Possible next steps 
+
+* Sanity-check by training the model using only mutations that are known to be correlated with certain genomic features, e.g., C->T mutation rate 
 is known to be influenced by CpG density  
 * Train the model using only mutations **not** subject to natural selection, e.g. synonymous mutations in the cancer genome, before searching for genomic regions under natural selection
 * Extend the neural network to include hidden nodes thereby making it possible to model mutation rates that are non-monotonic functions of feature variables
