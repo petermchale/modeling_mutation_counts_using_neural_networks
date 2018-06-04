@@ -13,7 +13,7 @@ from the expectations of the trained model. In other words, infer variants that 
 The code in this repo uses TensorFlow. Best is to set up a `conda` environment and install TensorFlow there: 
 
 ```
-conda create -n tensorflow python=2
+conda create -n tensorflow python=2 ipython-notebook --yes
 source activate tensorflow 
 conda install -c conda-forge tensorflow 
 ```
