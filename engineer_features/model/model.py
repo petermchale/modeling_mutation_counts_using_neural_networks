@@ -26,22 +26,14 @@ def train(data_df, l_heading_list, X_heading_list, y_heading_list, number_hidden
     with tf.variable_scope('feature_input_layer'):
         X = tf.placeholder(tf.float32, shape=(sample_size, number_feature_input_nodes))
 
-    # # hidden layer (placeholder for later development beyond Poisson regression)
-    # with tf.variable_scope('hidden_layer'):
-    #     hidden_layer_output = X
-    #
     # output layer of neural network
     with tf.variable_scope('output_layer'):
-        # weights = tf.get_variable(name="weights",
-        #                           shape=(number_hidden_nodes, number_output_nodes),
-        #                           initializer=tf.contrib.layers.xavier_initializer())
         weights = tf.get_variable(name="weights",
                                   shape=(number_feature_input_nodes, number_output_nodes),
                                   initializer=tf.contrib.layers.xavier_initializer())
         biases = tf.get_variable(name="biases",
                                  shape=number_output_nodes,
                                  initializer=tf.zeros_initializer())
-        # h = tf.exp(tf.matmul(hidden_layer_output, weights) + biases)
         h = tf.exp(tf.matmul(X, weights) + biases)
         prediction = l * h
 
@@ -70,13 +62,11 @@ def train(data_df, l_heading_list, X_heading_list, y_heading_list, number_hidden
             _, cost_eval, prediction_eval, h_eval = session.run([training_step, cost, prediction, h],
                                                                 feed_dict=feed_dict)
             if epoch % 10 == 0:
-                bias_eval = float(biases.eval())
-                weight_eval = float(weights.eval())
                 log_df.loc[log_row] = [epoch,
                                        cost_eval,
                                        np.exp(-sample_size * cost_eval),
-                                       bias_eval,
-                                       weight_eval]
+                                       biases.eval(),
+                                       weights.eval()]
                 log_row += 1
 
     data_df['h'] = h_eval

@@ -6,7 +6,7 @@ e.g. DNase hypersensitivity profiles. We are particularly interested in the foll
 * Learning new genomic "features" responsible for variation in *de novo* mutation rate with genomic coordinate. 
 
 * Infer genomic regions under natural selection by identifying regions in which the mutation count deviates 
-from expectation under the trained model. In other words, infer variants that give rise to inherited Mendelian diseases and driver mutations in cancer.
+from the expectations of the trained model. In other words, infer variants that give rise to inherited Mendelian diseases and driver mutations in cancer.
 
 # Feature-engineered models 
 

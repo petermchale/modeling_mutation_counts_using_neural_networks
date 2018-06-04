@@ -14,6 +14,9 @@ def main():
     args = parser.parse_args()
 
     df.columns = args.columns
+    print args.columns
+    print df
+
     df = df[df.varflag != 'VARTRUE']
     df['length'] = df['end'] - df['start']
 

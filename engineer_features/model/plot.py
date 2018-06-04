@@ -30,13 +30,18 @@ def plot_rates(f, df):
     format_axis(ax)
 
 
-def plot_counts(df, l_heading_list, X_heading_list, y_heading_list):
+def df_to_listOfStrings(df, cols, delimiter="<br>"):
+    # cols is a list of strings describing the column headings
+    # output: list of strings, each of the form, e.g., "col1: 2.3 \t col2: 3"
+    return [delimiter.join("{}: {}".format(*t) for t in zip(cols, row)) for _, row in df[cols].iterrows()]
+
+
+def plot_counts(df, y_heading_list, hover_text_list):
 
     plotly.offline.init_notebook_mode(connected=True)
 
-    l_heading, = l_heading_list
-    X_heading, = X_heading_list
     y_heading, = y_heading_list
+
     trace1 = plotly.graph_objs.Scattergl(
         x=df[y_heading],
         y=df['expected_counts'],
@@ -44,8 +49,8 @@ def plot_counts(df, l_heading_list, X_heading_list, y_heading_list):
         marker=dict(
             size=10,
             line=dict(width=1.5)),
-        text=['length: {}<br>x: {:12.2}'.format(int(l), x) for l, x in zip(df[l_heading], df[X_heading])],
-        hoverinfo='text')
+            text=df_to_listOfStrings(df, hover_text_list),
+            hoverinfo='text')
 
     a = np.arange(df[y_heading].max())
     trace2 = plotly.graph_objs.Scattergl(x=a, y=a)
